@@ -1,0 +1,418 @@
+2023-01-18T14:43:23,790 ERROR [main]: HikariPool                           - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "music_management" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2788) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:174) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:247) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:434) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.connect(Driver.java:291) ~[postgresql-42.5.1.jar:42.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:459) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:533) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:114) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-2.7.7.jar:?]
+	at ro.ubb.server.config.JPAConfig.dataSource(JPAConfig.java:57) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$dataSource$0(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig.entityManagerFactory(JPAConfig.java:71) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$entityManagerFactory$1(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.entityManagerFactory(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:105) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.ServerApp.main(ServerApp.java:7) [main/:?]
+2023-01-18T14:43:23,800 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'albumServiceImpl': Unsatisfied dependency expressed through field 'albumRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'albumRepository': Cannot create inner bean '(inner bean)#2c177f9e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2c177f9e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.persistence.EntityManagerFactory]: Factory method 'entityManagerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "music_management" does not exist 
+2023-01-18T14:43:26,783 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'textUi': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceInvoker' defined in ro.ubb.client.config.AppConfig: Invocation of init method failed; nested exception is org.springframework.remoting.RemoteLookupFailureException: Lookup of RMI stub failed; nested exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused 
+2023-01-18T14:43:50,026 ERROR [main]: HikariPool                           - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "music_management" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2788) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:174) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:247) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:434) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.connect(Driver.java:291) ~[postgresql-42.5.1.jar:42.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:459) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:533) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:114) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-2.7.7.jar:?]
+	at ro.ubb.server.config.JPAConfig.dataSource(JPAConfig.java:57) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$dataSource$0(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig.entityManagerFactory(JPAConfig.java:71) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$entityManagerFactory$1(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.entityManagerFactory(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:105) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.ServerApp.main(ServerApp.java:7) [main/:?]
+2023-01-18T14:43:50,038 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'albumServiceImpl': Unsatisfied dependency expressed through field 'albumRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'albumRepository': Cannot create inner bean '(inner bean)#2c177f9e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2c177f9e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.persistence.EntityManagerFactory]: Factory method 'entityManagerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "music_management" does not exist 
+2023-01-18T14:45:08,283 ERROR [main]: HikariPool                           - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "music_management" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2788) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:174) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:247) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.makeConnection(Driver.java:434) ~[postgresql-42.5.1.jar:42.5.1]
+	at org.postgresql.Driver.connect(Driver.java:291) ~[postgresql-42.5.1.jar:42.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:459) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:533) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:114) [HikariCP-2.7.7.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) [HikariCP-2.7.7.jar:?]
+	at ro.ubb.server.config.JPAConfig.dataSource(JPAConfig.java:57) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$dataSource$0(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.dataSource(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig.entityManagerFactory(JPAConfig.java:71) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.CGLIB$entityManagerFactory$3(<generated>) [main/:?]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29$$FastClassBySpringCGLIB$$3f9b3f33.invoke(<generated>) [main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.config.JPAConfig$$EnhancerBySpringCGLIB$$26c41a29.entityManagerFactory(<generated>) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) [spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:105) [spring-context-5.3.25.jar:5.3.25]
+	at ro.ubb.server.ServerApp.main(ServerApp.java:7) [main/:?]
+2023-01-18T14:45:08,295 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'albumServiceImpl': Unsatisfied dependency expressed through field 'albumRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'albumRepository': Cannot create inner bean '(inner bean)#2c177f9e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2c177f9e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.persistence.EntityManagerFactory]: Factory method 'entityManagerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ro.ubb.server.config.JPAConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "music_management" does not exist 
+2023-01-18T15:16:05,583 DEBUG [RMI TCP Connection(4)-192.168.50.10]: UserServiceImpl                      - ### Entering read users method. 
+2023-01-18T15:16:05,593 DEBUG [RMI TCP Connection(4)-192.168.50.10]: UserServiceImpl                      - ### Exiting read users method. 
+2023-01-18T15:52:34,466 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class ro.ubb.common.model.Artist 
+2023-01-18T15:52:41,613 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class ro.ubb.common.model.Artist 
+2023-01-18T16:01:36,523 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:01:39,532 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'textUi': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceInvoker' defined in ro.ubb.client.config.AppConfig: Invocation of init method failed; nested exception is org.springframework.remoting.RemoteLookupFailureException: Lookup of RMI stub failed; nested exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused 
+2023-01-18T16:01:42,744 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:04:52,531 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:06:03,855 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:06:46,369 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:07:45,493 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:09:01,695 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:09:40,012 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:09:46,177 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:12:51,540 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:21:27,421 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:34:24,960 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:40:22,174 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:40:56,133 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T16:54:31,600 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property activityStartDateAsc found for type Artist! 
+2023-01-18T17:23:25,915 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDate()! No parameter available for part activityStartDate SIMPLE_PROPERTY (1): [Is, Equals] NEVER. 
+2023-01-18T17:30:00,443 DEBUG [RMI TCP Connection(4)-192.168.50.10]: UserServiceImpl                      - ### Entering read users method. 
+2023-01-18T17:30:00,585 DEBUG [RMI TCP Connection(4)-192.168.50.10]: UserServiceImpl                      - ### Exiting read users method. 
+2023-01-18T17:30:17,466 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:30:17,477 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T17:34:13,640 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'textUi': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceInvoker' defined in ro.ubb.client.config.AppConfig: Invocation of init method failed; nested exception is org.springframework.remoting.RemoteLookupFailureException: Lookup of RMI stub failed; nested exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused 
+2023-01-18T17:38:51,261 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByActivityStartDateAsc()! No property asc found for type Date! Traversed path: Artist.activityStartDate. 
+2023-01-18T17:42:02,604 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:42:02,738 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T17:46:51,627 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'artistServiceImpl': Unsatisfied dependency expressed through field 'artistRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'artistRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List ro.ubb.server.repository.ArtistRepository.findAllOrderByFirstNameAsc()! No property asc found for type String! Did you mean 'hash'? Traversed path: Artist.firstName. 
+2023-01-18T17:50:39,023 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering create user method. 
+2023-01-18T17:50:39,100 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting create user method. 
+2023-01-18T17:50:46,045 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:50:46,056 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T17:54:28,152 DEBUG [RMI TCP Connection(4)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:54:28,282 DEBUG [RMI TCP Connection(4)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T17:55:42,464 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:55:42,475 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read artist method. 
+2023-01-18T17:57:25,372 DEBUG [RMI TCP Connection(7)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:57:25,375 DEBUG [RMI TCP Connection(7)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read artist method. 
+2023-01-18T17:57:58,511 DEBUG [RMI TCP Connection(8)-192.168.50.10]: ArtistServiceImpl                    - ### Entering update artists method. 
+2023-01-18T17:57:58,513 DEBUG [RMI TCP Connection(8)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting update artists method. 
+2023-01-18T17:58:05,539 DEBUG [RMI TCP Connection(8)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T17:58:05,542 DEBUG [RMI TCP Connection(8)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T18:02:07,178 DEBUG [RMI TCP Connection(4)-192.168.50.10]: BandServiceImpl                      - ### Entering read users method. 
+2023-01-18T18:02:07,310 DEBUG [RMI TCP Connection(4)-192.168.50.10]: BandServiceImpl                      - ### Exiting read users method. 
+2023-01-18T18:02:15,200 DEBUG [RMI TCP Connection(4)-192.168.50.10]: SongServiceImpl                      - ### Entering read users method. 
+2023-01-18T18:02:15,210 DEBUG [RMI TCP Connection(4)-192.168.50.10]: SongServiceImpl                      - ### Exiting read users method. 
+2023-01-18T18:11:25,166 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T18:11:25,296 DEBUG [RMI TCP Connection(5)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-18T18:13:20,638 DEBUG [RMI TCP Connection(7)-192.168.50.10]: SongServiceImpl                      - ### Entering read users method. 
+2023-01-18T18:13:20,650 DEBUG [RMI TCP Connection(7)-192.168.50.10]: SongServiceImpl                      - ### Exiting read users method. 
+2023-01-18T18:13:34,697 DEBUG [RMI TCP Connection(7)-192.168.50.10]: UserServiceImpl                      - ### Entering read users method. 
+2023-01-18T18:13:34,708 DEBUG [RMI TCP Connection(7)-192.168.50.10]: UserServiceImpl                      - ### Exiting read users method. 
+2023-01-18T18:13:39,718 DEBUG [RMI TCP Connection(7)-192.168.50.10]: BandServiceImpl                      - ### Entering read users method. 
+2023-01-18T18:13:39,725 DEBUG [RMI TCP Connection(7)-192.168.50.10]: BandServiceImpl                      - ### Exiting read users method. 
+2023-01-18T21:00:04,884 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s335ms). 
+2023-01-18T21:24:46,407 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m11s504ms). 
+2023-01-18T21:26:53,333 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s91ms). 
+2023-01-18T22:06:59,200 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m35s864ms). 
+2023-01-18T22:08:19,215 DEBUG [RMI TCP Connection(71)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artist method. 
+2023-01-18T22:08:19,447 DEBUG [RMI TCP Connection(71)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read users method. 
+2023-01-20T20:26:00,155 WARN  [main]: AnnotationConfigApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'textUi': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceInvoker' defined in ro.ubb.client.config.AppConfig: Invocation of init method failed; nested exception is org.springframework.remoting.RemoteLookupFailureException: Lookup of RMI stub failed; nested exception is java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused 
+2023-01-20T20:26:32,483 DEBUG [RMI TCP Connection(4)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artists method. 
+2023-01-20T20:26:32,626 DEBUG [RMI TCP Connection(4)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read artists method. 
+2023-01-20T20:26:36,488 DEBUG [RMI TCP Connection(4)-192.168.50.10]: SongServiceImpl                      - ### Entering read songs method. 
+2023-01-20T20:26:36,501 DEBUG [RMI TCP Connection(4)-192.168.50.10]: SongServiceImpl                      - ### Exiting read songs method. 
+2023-01-20T20:26:40,499 DEBUG [RMI TCP Connection(4)-192.168.50.10]: AlbumServiceImpl                     - ### Entering readAll albums method. 
+2023-01-20T20:26:40,509 DEBUG [RMI TCP Connection(4)-192.168.50.10]: AlbumServiceImpl                     - ### Exiting readAll albums method. 
+2023-01-20T20:26:45,509 DEBUG [RMI TCP Connection(4)-192.168.50.10]: BandServiceImpl                      - ### Entering read bands method. 
+2023-01-20T20:26:45,517 DEBUG [RMI TCP Connection(4)-192.168.50.10]: BandServiceImpl                      - ### Exiting read bands method. 
+2023-01-20T21:08:41,301 DEBUG [RMI TCP Connection(23)-192.168.50.10]: ArtistServiceImpl                    - ### Entering read artists method. 
+2023-01-20T21:08:41,430 DEBUG [RMI TCP Connection(23)-192.168.50.10]: ArtistServiceImpl                    - ### Exiting read artists method. 
+2023-01-20T22:40:44,728 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m12s846ms). 
+2023-01-20T23:29:55,720 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m40s976ms). 
+2023-01-21T01:01:33,454 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h16m7s620ms). 
+2023-01-21T03:02:32,643 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h29s169ms). 
+2023-01-21T03:40:40,830 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m8s157ms). 
+2023-01-21T04:49:32,488 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m21s18ms). 
+2023-01-21T05:49:02,307 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58m59s805ms). 
+2023-01-21T06:51:11,112 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s123ms). 
+2023-01-21T07:31:03,831 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m22s708ms). 
+2023-01-21T07:46:42,772 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m8s932ms). 
+2023-01-21T07:57:00,184 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m17s412ms). 
+2023-01-21T07:58:25,168 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s980ms). 
+2023-01-21T09:31:47,784 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30m52s588ms). 
+2023-01-21T09:46:57,347 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m9s561ms). 
+2023-01-21T10:14:08,227 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m10s872ms). 
+2023-01-21T11:08:13,432 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m5s210ms). 
+2023-01-21T12:02:29,625 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m16s175ms). 
+2023-01-21T12:45:06,512 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m36s845ms). 
+2023-01-21T13:10:52,803 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m46s355ms). 
+2023-01-21T13:13:55,833 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m3s30ms). 
+2023-01-21T13:44:49,506 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m53s674ms). 
+2023-01-21T14:29:57,761 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m8s191ms). 
+2023-01-21T15:00:11,824 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m14s119ms). 
+2023-01-21T16:40:24,849 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h40m13s26ms). 
+2023-01-21T18:40:54,045 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h29s199ms). 
+2023-01-21T19:32:59,247 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m5s201ms). 
+2023-01-21T20:07:22,258 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m23s15ms). 
+2023-01-21T22:28:22,446 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h30s103ms). 
+2023-01-22T02:28:51,063 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h28s617ms). 
+2023-01-22T04:29:20,076 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h29s13ms). 
+2023-01-22T08:05:57,289 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h36m37s214ms). 
+2023-01-22T12:09:02,920 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m1s995ms). 
+2023-01-22T12:27:01,492 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m58s506ms). 
+2023-01-22T12:38:26,112 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m17s170ms). 
+2023-01-22T12:41:58,589 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s477ms). 
+2023-01-22T12:59:12,083 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m13s494ms). 
+2023-01-22T14:21:33,424 WARN  [HikariPool-1 housekeeper]: HikariPool                           - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s14ms). 
